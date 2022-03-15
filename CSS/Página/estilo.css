@@ -1,0 +1,408 @@
+:root{
+    --primary: rgb(55,97,218);
+    --bg-primary: rgba(55,97,218,0.2);
+    --secundary: rgb(8, 153,230);
+    --acent: rgb(35,61,86);
+    --bg-acent: rgba(35,61,86,0.05);
+    --acent-secundary: rgb(255,208,18);
+    --bg-acent-secundary: rgba(255,208,18,0.2);
+    --grey: rgb(238,243,255);
+    --border-grey: rgba(238,243,255,0.5);
+    --dark-grey: rgb(109,123,147);
+    --page-padding: 0 5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 70vh 90vh 90vh 80vh 30vh;
+}
+
+.intro{
+    position: relative;
+}
+/* Estilos del header */
+.intro header{
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+    padding: var(--page-padding);
+    
+}
+#logo{
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.intro .menu{
+    display: flex;
+    list-style: none;
+}
+.intro .menu li{
+    padding: 15px 25px;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.intro .menu li.active{
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+.intro .menu li a{
+    color: var(--dark-grey);
+}
+.intro .menu li.active a{
+    color: var(--grey);
+}
+/* Fin header*/
+
+/* Estilos intro*/
+.intro .vaccines{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+.intro .vaccines .title{
+    padding: 100px 30% 0 10%;
+}
+.intro .vaccines .title h1{
+    color: var(--acent);
+    font-size: 48px;
+    font-weight: bolder;
+    margin: 10% 0 10% 0;
+}
+.intro .vaccines .title p{
+    color: var(--dark-grey);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-right: 20%;
+}
+.intro .vaccines .title ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+.intro .vaccines .title ul li{
+    margin: 10% 10% 0 0;
+    color: var(--acent);
+}
+.intro .vaccines .title ul li i{
+    background-color: var(--bg-acent-secundary);
+    padding: 6px;
+    border-radius: 2px;
+    color: var(--acent-secundary);
+}
+.schedule{
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    padding: var(--page-padding);
+    
+    z-index: 1;
+}
+.schedule span{
+    font-weight: bold;
+    color: var(--acent);
+}
+.schedule i{
+    background-color: var(--bg-primary);
+    padding: 6px;
+    border-radius: 2px;
+    color: var(--primary);
+}
+.schedule .schedule-data{
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.schedule .schedule-data ul{
+    list-style: none;
+}
+.schedule .schedule-data ul li{
+    color: var(--dark-grey);
+    font-weight: bold;
+    padding-top: 10px;
+}
+.schedule .schedule-data ul li span {
+    color: var(--acent);
+    padding-left: 32px;
+}
+.schedule .schedule-data button,
+.contact-list .contact-card button{
+    padding: 15px 35px;
+    background-color: var(--primary);
+    color: var(--grey);
+    border: 0;
+    border-radius: 5px;
+}
+.img-1,.img-2, .img-3{
+    position: relative;
+    background: linear-gradient(to bottom right, var(--secundary), var(--primary));
+}
+.img-1 img{
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    height: 85%;
+}
+/*Fin estilos intro*/
+
+/*Estilos nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--page-padding);
+}
+
+nav img{
+    padding: 0 10px;
+    width: 18vw;
+    filter:grayscale();
+    opacity: 0.2;
+}
+/*Fin estilos nav*/
+
+/*Estilos why*/
+.why{
+    padding: var(--page-padding);
+}
+.card{
+    width: 50%;
+    margin: 25px 0;
+}
+.card h1{
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--acent);
+    padding: 18px 0;
+}
+.card p{
+    color: var(--dark-grey);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-right: 20%;
+}
+
+.benefits{
+    display: flex;
+    justify-content: space-between;
+}
+.benefits .benefits-card{
+    border: 2px solid var(--border-grey);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px;
+    height: 320px;
+    width: 280px;
+}
+.benefits .benefits-card i,
+.list .list-card i,
+.contact-list .contact-card i{
+    background-color: var(--bg-primary);
+    color: var(--primary);
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.benefits .benefits-card h2{
+    color: var(--acent);
+    padding: 18px 0;
+    font-size: 22px;
+}
+.benefits .benefits-card p{
+    color: var(--dark-grey);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.benefits .benefits-card.active,
+.list .list-card.active,
+.contact-list .contact-card.active{
+    border: 0;
+    box-shadow: 5px 5px 10px 3px var(--bg-acent);
+}
+
+.benefits .benefits-card.active i,
+.list .list-card.active i,
+.contact-list .contact-card.active i{
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 1px var(--bg-primary);
+}
+/*Fin de estilos de why*/
+
+/*Estilos de preparation*/
+.preparation,.contact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 75%;
+}
+.preparation .card,
+.contact .card { width: 100%; padding: 15px;}
+.preparation .list{ 
+    padding: 15px;
+}
+.list .list-card,
+.contact-list .contact-card{
+    border: 2px solid var(--border-grey);
+    border-radius: 5px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--acent);
+    font-weight: bold;
+}
+.list .list-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list .list-title span{
+    padding: 0 10px;
+}
+.list .list-card i{
+    background-color: var(--bg-acent);
+}
+.list .list-title>i{
+    font-size: 14px;
+    padding: 5px;
+}
+.list .list-detail{
+    font-size: 14px;
+    color: var(--dark-grey);
+    padding: 20px 50px;
+    line-height: 22px;
+}
+.list .list-card.active .list-title>i{
+    color: var(--dark-grey);
+}
+
+.img-2 img,
+.img-3 img{
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    height: 120%;
+}
+/*Estilos de contact*/
+.contact{
+    margin-top: 60px;
+}
+.contact .card{
+    padding: 0 10%;
+}
+
+.contact-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin-top: 100px;
+}
+.contact-list .contact-card{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+.contact-list .contact-card div{
+    padding-left: 5px;
+}
+.contact-list .contact-card h2{
+    font-size: 18px;
+}
+.contact-list .contact-card span{
+    font-size: 14px;
+    color: var(--dark-grey);
+}
+.contact-list .contact-card button{
+    background-color: var(--bg-primary);
+    color: var(--primary);
+    font-weight: bold;
+}
+.contact-list .contact-card.active button{
+    background-color: var(--primary);
+    color: var(--grey);
+}
+
+/*Estilos footer*/
+.footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #eef3ff;
+    margin-top: 200px;
+    width: 100%;
+    padding: 0 10%;
+    grid-template-rows: 100%;
+}
+.footer h1{
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.footer-p{
+    color: #6d7b93;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-left: 10% ;
+}
+.footer-table{
+    float: right;
+    text-align: justify;
+    color: var(--primary);
+    border: 0px;
+    border-spacing: 20px;
+}
+.th{
+    color: #1f3e72;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 22px;
+}
+.td{
+    color: #6d7b93;
+    font-family: Arial, Helvetica, sans-serif;
+}
